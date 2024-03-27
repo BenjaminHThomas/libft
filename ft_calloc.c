@@ -1,21 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bento </var/spool/mail/bento>              +#+  +:+       +#+        */
+/*   By: bthomas <bthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/26 12:04:30 by bento             #+#    #+#             */
-/*   Updated: 2024/03/26 14:18:51 by bthomas          ###   ########.fr       */
+/*   Created: 2024/03/26 14:26:22 by bthomas           #+#    #+#             */
+/*   Updated: 2024/03/26 14:34:14 by bthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
-# include <stdlib.h>
-# include <unistd.h>
+#include "../libft.h"
 
-int	ft_atoi(const char *s);
-
-
-#endif
+void	*ft_calloc(size_t nmemb, size_t size)
+{
+	// I need to write ft_bzero before I continue
