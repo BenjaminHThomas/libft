@@ -6,7 +6,7 @@
 /*   By: bento </var/spool/mail/bento>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/26 12:04:30 by bento             #+#    #+#             */
-/*   Updated: 2024/03/26 14:18:51 by bthomas          ###   ########.fr       */
+/*   Updated: 2024/03/28 20:00:02 by bthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,6 @@
 # include <unistd.h>
 
 int	ft_atoi(const char *s);
-
+void	*ft_memset(void *s, int c, size_t n);
 
 #endif

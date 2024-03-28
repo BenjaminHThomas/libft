@@ -1,38 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bthomas <bthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/26 14:35:18 by bthomas           #+#    #+#             */
-/*   Updated: 2024/03/28 20:01:18 by bthomas          ###   ########.fr       */
+/*   Created: 2024/03/28 16:11:53 by bthomas           #+#    #+#             */
+/*   Updated: 2024/03/28 19:26:46 by bthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *s, int c, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-	unsigned char	*a;
-
-	a = s;
-	while (n--)
-		*a++ = c;
-	return (s);
+	ft_memset(s, 0, n);
 }
-/*
+
 #include <stdio.h>
-#include <string.h>
 int	main(void)
 {
-	char str[50] = "GeeksForGeeks is for programming geeks.";
-	char *mine = str;
-	char *real = str;
-	ft_memset(mine + 13, 0, 8*sizeof(char));
-	printf("mine:  %s", mine);
-	memset(real + 13, 0, 8*sizeof(char));
-	printf("\nreal:  %s", real);
-	return 0; 
+	char *str = "wowowwowowow";
+	ft_bzero(str + 2, 5*(sizeof(char)));
+	printf("%s", str);
+	return (0);
 }
-*/
