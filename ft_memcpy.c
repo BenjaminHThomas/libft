@@ -6,7 +6,7 @@
 /*   By: bthomas <bthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/29 15:18:37 by bthomas           #+#    #+#             */
-/*   Updated: 2024/03/29 15:54:51 by bthomas          ###   ########.fr       */
+/*   Updated: 2024/03/29 16:25:59 by bthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 
 	pd = (unsigned char *)dest;
 	ps = (const unsigned char *)src;
-	while (n--)
+	while (n-- && *pd)
 		*pd++ = *ps++;
-	*pd = '\0';
 	return (dest);
 }
 /*

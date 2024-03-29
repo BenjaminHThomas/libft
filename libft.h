@@ -6,7 +6,7 @@
 /*   By: bento </var/spool/mail/bento>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/26 12:04:30 by bento             #+#    #+#             */
-/*   Updated: 2024/03/29 15:55:20 by bthomas          ###   ########.fr       */
+/*   Updated: 2024/03/29 16:58:51 by bthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,6 @@ int		ft_strlen(const char *s);
 int		ft_tolower(int i);
 int		ft_toupper(int i);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
-
+void	*ft_memmove(void *dest, const void *src, size_t n);
 
 #endif
