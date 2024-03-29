@@ -6,7 +6,7 @@
 #    By: bthomas <bthomas@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/29 11:11:38 by bthomas           #+#    #+#              #
-#    Updated: 2024/03/29 11:52:18 by bthomas          ###   ########.fr        #
+#    Updated: 2024/03/29 15:56:11 by bthomas          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,6 +21,7 @@ CFILES	= ft_bzero.c \
 		  ft_isalpha.c \
 		  ft_isdigit.c \
 		  ft_memset.c \
+		  ft_memcpy.c \
 		  ft_tolower.c
 
 OFILES = $(CFILES:.c=.o)
