@@ -6,7 +6,7 @@
 #    By: bthomas <bthomas@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/29 11:11:38 by bthomas           #+#    #+#              #
-#    Updated: 2024/03/30 16:39:42 by bthomas          ###   ########.fr        #
+#    Updated: 2024/03/30 16:53:57 by bthomas          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,6 +27,7 @@ CFILES	= ft_bzero.c \
 		  ft_strlcat.c \
 		  ft_strchr.c \
 		  ft_strrchr.c \
+		  ft_strncmp.c \
 		  ft_tolower.c
 
 OFILES = $(CFILES:.c=.o)
