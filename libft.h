@@ -6,7 +6,7 @@
 /*   By: bento </var/spool/mail/bento>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/26 12:04:30 by bento             #+#    #+#             */
-/*   Updated: 2024/03/30 18:09:34 by bthomas          ###   ########.fr       */
+/*   Updated: 2024/03/31 10:09:32 by bthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,6 @@ char	*ft_strrchr(const char *s, int c);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
+char	*ft_strnstr(const char *big, const char *little, size_t len);
 
 #endif
