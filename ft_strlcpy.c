@@ -6,7 +6,7 @@
 /*   By: bthomas <bthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/30 11:49:36 by bthomas           #+#    #+#             */
-/*   Updated: 2024/03/30 15:36:19 by bthomas          ###   ########.fr       */
+/*   Updated: 2024/03/31 15:12:02 by bthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,13 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	const char	*ps;
 
 	if (size == 0)
-		return (strlen(src));
+		return (ft_strlen(src));
 	pd = dest;
 	ps = src;
 	while (size-- - 1 && *ps)
 		*pd++ = *ps++;
 	*pd = '\0';
-	return (strlen(src));
+	return (ft_strlen(src));
 }
 /*
 int	main(void)

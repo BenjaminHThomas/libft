@@ -6,9 +6,11 @@
 /*   By: bthomas <bthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/30 16:57:00 by bthomas           #+#    #+#             */
-/*   Updated: 2024/03/30 17:31:02 by bthomas          ###   ########.fr       */
+/*   Updated: 2024/03/31 15:13:01 by bthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
