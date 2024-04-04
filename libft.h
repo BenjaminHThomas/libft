@@ -6,7 +6,7 @@
 /*   By: bento </var/spool/mail/bento>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/26 12:04:30 by bento             #+#    #+#             */
-/*   Updated: 2024/04/04 17:26:50 by bthomas          ###   ########.fr       */
+/*   Updated: 2024/04/04 18:23:03 by bthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,5 +43,7 @@ char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s);
 char	**ft_strsplit(char const *s, char c);
 char	*ft_itoa(int n);
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 #endif
+
