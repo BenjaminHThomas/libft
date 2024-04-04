@@ -6,7 +6,7 @@
 /*   By: bthomas <bthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/01 11:11:17 by bthomas           #+#    #+#             */
-/*   Updated: 2024/04/04 12:03:44 by bthomas          ###   ########.fr       */
+/*   Updated: 2024/04/04 14:45:43 by bthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static char	*get_word(const char *s, int start, int end)
 	int		i;
 
 	i = 0;
-	word = (char *)calloc(end - start + 1, sizeof(char));
+	word = (char *)ft_calloc(end - start + 1, sizeof(char));
 	if (!word)
 		return (NULL);
 	while (start <= end)
@@ -38,7 +38,7 @@ char	**ft_strsplit(char const *s, char c)
 	int		end;
 	int		i;
 
-	wlist = (char **)calloc((strlen(s) + 1), sizeof(char *));
+	wlist = (char **)ft_calloc((ft_strlen(s) + 1), sizeof(char *));
 	if (!wlist)
 		return (NULL);
 	start = 0;
