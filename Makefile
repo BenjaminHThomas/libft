@@ -6,7 +6,7 @@
 #    By: bthomas <bthomas@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/29 11:11:38 by bthomas           #+#    #+#              #
-#    Updated: 2024/04/08 11:03:14 by bthomas          ###   ########.fr        #
+#    Updated: 2024/04/08 11:24:24 by bthomas          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,6 +42,7 @@ CFILES	= ft_bzero.c \
 		  ft_putchar_fd.c \
 		  ft_putstr_fd.c \
 		  ft_putendl_fd.c \
+		  ft_putnbr_fd.c \
 		  ft_tolower.c
 
 OFILES = $(CFILES:.c=.o)
