@@ -1,45 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bthomas <bthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/04 17:37:16 by bthomas           #+#    #+#             */
-/*   Updated: 2024/04/08 09:07:07 by bthomas          ###   ########.fr       */
+/*   Created: 2024/04/08 08:38:05 by bthomas           #+#    #+#             */
+/*   Updated: 2024/04/08 09:08:09 by bthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	char	*res;
-	int		i;
+	int	i;
 
-	res = ft_calloc(ft_strlen(s) + 1, sizeof(char));
-	if (!res)
-		return (NULL);
 	i = 0;
 	while (s[i])
 	{
-		res[i] = f(i, s);
+		f(i, s);
 		i++;
 	}
-	return (res);
 }
 /*
 #include <stdio.h>
-char	example(unsigned int i, char x)
+void	example(unsigned int i, char *x)
 {
-	printf("index = %d\n", i);
-	return (x - 1);
+	x[i] -= 1;
 }
 
 int	main(void)
 {
-	char	*str;
-	str = ft_strmapi("Howdy", example);
+	char	str[10] = "Howdy";
+	ft_striteri(str, example);
 	printf("\n%s\n", str);
 	return (0);
 }
