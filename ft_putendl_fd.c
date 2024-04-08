@@ -1,46 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bthomas <bthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/04 17:37:16 by bthomas           #+#    #+#             */
-/*   Updated: 2024/04/08 11:04:06 by bthomas          ###   ########.fr       */
+/*   Created: 2024/04/08 10:57:30 by bthomas           #+#    #+#             */
+/*   Updated: 2024/04/08 11:01:39 by bthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+void	ft_putendl_fd(char const *s, int fd)
 {
-	char	*res;
-	int		i;
-
-	res = ft_calloc(ft_strlen(s) + 1, sizeof(char));
-	if (!res)
-		return (NULL);
-	i = 0;
-	while (s[i])
+	while (*s)
 	{
-		res[i] = f(i, s[i]);
-		i++;
+		write(fd, &(*s), 1);
+		s++;
 	}
-	return (res);
+	write(fd, "\n", 1);
 }
 /*
-#include <stdio.h>
-char	example(unsigned int i, char x)
-{
-	printf("index = %d\n", i);
-	return (x - 1);
-}
-
 int	main(void)
 {
-	char	*str;
-	str = ft_strmapi("Howdy", example);
-	printf("\n%s\n", str);
+	ft_putendl_fd("Wowzers", 1);
 	return (0);
 }
 */
