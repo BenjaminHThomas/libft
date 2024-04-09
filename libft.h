@@ -6,7 +6,7 @@
 /*   By: bento </var/spool/mail/bento>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/26 12:04:30 by bento             #+#    #+#             */
-/*   Updated: 2024/04/08 11:25:04 by bthomas          ###   ########.fr       */
+/*   Updated: 2024/04/09 10:41:33 by bthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,13 @@
 # define LIBFT_H
 # include <stdlib.h>
 # include <unistd.h>
+
+typedef struct s_list
+{
+	void			*content;
+	size_t			content_size;
+	struct s_list	*next;
+}					t_list;
 
 int		ft_atoi(const char *s);
 void	ft_bzero(void *s, size_t n);
@@ -49,5 +56,6 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char const *s, int fd);
 void	ft_putendl_fd(char const *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
+t_list	*ft_lstnew(void *content);
 
 #endif
