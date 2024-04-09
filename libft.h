@@ -6,7 +6,7 @@
 /*   By: bento </var/spool/mail/bento>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/26 12:04:30 by bento             #+#    #+#             */
-/*   Updated: 2024/04/09 10:41:33 by bthomas          ###   ########.fr       */
+/*   Updated: 2024/04/09 12:05:03 by bthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,5 +57,6 @@ void	ft_putstr_fd(char const *s, int fd);
 void	ft_putendl_fd(char const *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 t_list	*ft_lstnew(void *content);
+void	ft_lstadd_front(t_list **lst, t_list *new);
 
 #endif
