@@ -6,15 +6,18 @@
 /*   By: bthomas <bthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/30 15:42:29 by bthomas           #+#    #+#             */
-/*   Updated: 2024/03/30 15:54:26 by bthomas          ###   ########.fr       */
+/*   Updated: 2024/04/10 17:31:09 by bthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strchr(const char *s, int c)
 {
-	while (*s != c && *s)
+	unsigned char	c2;
+
+	c2 = (unsigned char)c;
+	while (*s != c2 && *s)
 		s++;
-	if (*s == c)
+	if (*s == c2)
 		return ((char *)s);
 	return (0);
 }
