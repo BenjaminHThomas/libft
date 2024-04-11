@@ -6,7 +6,7 @@
 /*   By: bthomas <bthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/30 16:09:14 by bthomas           #+#    #+#             */
-/*   Updated: 2024/04/11 09:40:53 by bthomas          ###   ########.fr       */
+/*   Updated: 2024/04/11 16:30:53 by bthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,27 +17,26 @@ char	*ft_strrchr(const char *s, int c)
 	char			*ps;
 	unsigned char	c2;
 
-	if (!s)
-		return (0);
 	c2 = (unsigned char)c;
-	ps = 0;
+	ps = NULL;
 	while (*s)
 	{
 		if (*s == c2)
 			ps = (char *)s;
 		s++;
 	}
-	if (c == '\0' && *s == '\0')
+	if (c == '\0')
 		return ((char *)s);
 	return (ps);
 }
 /*
 #include <stdio.h>
+#include <string.h>
 int	main(void)
 {
-	char *str = "xhahaha Y wow Y pop Y boo";
-	str = ft_strrchr(str, 0);
-	printf("%s", str);
+	char *str = ft_strrchr("teste", '\0');
+	char *str2 = strrchr("teste", '\0');
+	printf("mine: %s\nreal: %s", str, str2);
 	return (0);
 }
 */
