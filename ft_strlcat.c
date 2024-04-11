@@ -6,7 +6,7 @@
 /*   By: bthomas <bthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/30 12:51:55 by bthomas           #+#    #+#             */
-/*   Updated: 2024/03/31 15:12:18 by bthomas          ###   ########.fr       */
+/*   Updated: 2024/04/11 16:04:39 by bthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 
 	i = 0;
 	j = 0;
+	if (size == 0)
+		return (ft_strlen(src));
 	while (dest[i] && i < size)
 		i++;
 	while (src[j] && (i + j) < size - 1)
