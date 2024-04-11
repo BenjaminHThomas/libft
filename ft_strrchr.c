@@ -6,7 +6,7 @@
 /*   By: bthomas <bthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/30 16:09:14 by bthomas           #+#    #+#             */
-/*   Updated: 2024/04/10 18:47:23 by bthomas          ###   ########.fr       */
+/*   Updated: 2024/04/11 09:40:53 by bthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	*ft_strrchr(const char *s, int c)
 		s++;
 	}
 	if (c == '\0' && *s == '\0')
-		return (char *)s;
+		return ((char *)s);
 	return (ps);
 }
 /*
