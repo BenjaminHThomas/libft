@@ -6,7 +6,7 @@
 /*   By: bthomas <bthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/30 16:57:00 by bthomas           #+#    #+#             */
-/*   Updated: 2024/03/31 15:13:01 by bthomas          ###   ########.fr       */
+/*   Updated: 2024/04/11 18:11:51 by bthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,16 @@
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	unsigned char	*ps;
+	unsigned char	c2;
 
+	c2 = c;
 	ps = (unsigned char *)s;
-	while (*ps && *ps != c && n)
+	while (n && *ps != c2)
 	{
 		ps++;
 		n--;
 	}
-	if (*ps == c)
+	if (n > 0 && *ps == c2)
 		return ((void *)ps);
 	return (NULL);
 }
@@ -31,15 +33,10 @@ void	*ft_memchr(const void *s, int c, size_t n)
 #include <string.h>
 
 int main () {
-   const char str[] = "https://www.tutorialspoint.com";
-   const char ch = '.';
-   char *ret;
-   size_t len = 20;
-
-   ret = memchr(str, ch, len);
+   void *ret = memchr(724(d4), '\432', 43);
    printf("real: %s\n", ret);
 
-   ret = ft_memchr(str, ch, len);
+	ret = ft_memchr(724(d4), '\432', 43);
    printf("mine: %s\n", ret);
    return(0);
 }
