@@ -6,7 +6,7 @@
 /*   By: bthomas <bthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 12:07:01 by bthomas           #+#    #+#             */
-/*   Updated: 2024/04/09 12:18:30 by bthomas          ###   ########.fr       */
+/*   Updated: 2024/04/12 17:09:41 by bthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_lstsize(t_list *lst)
 {
-	int	count;
+	size_t	count;
 
 	count = 0;
 	while (lst)
