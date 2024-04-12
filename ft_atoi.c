@@ -6,7 +6,7 @@
 /*   By: bthomas <bthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/26 13:55:00 by bthomas           #+#    #+#             */
-/*   Updated: 2024/03/28 20:11:35 by bthomas          ###   ########.fr       */
+/*   Updated: 2024/04/12 10:17:06 by bthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_atoi(const char *s)
 {
-	int				i;
-	int				sign;
-	unsigned int	res;
+	int			i;
+	int			sign;
+	long int	res;
 
 	i = 0;
 	res = 0;
@@ -28,7 +28,9 @@ int	ft_atoi(const char *s)
 		sign = -1;
 		i++;
 	}
-	while (s[i] >= '0' && s[i] <= '9')
+	else if (s[i] == '+')
+		i++;
+	while (ft_isdigit(s[i]))
 	{
 		res *= 10;
 		res += s[i] - '0';
