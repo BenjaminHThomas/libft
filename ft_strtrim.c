@@ -6,35 +6,48 @@
 /*   By: bthomas <bthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/31 16:45:21 by bthomas           #+#    #+#             */
-/*   Updated: 2024/04/01 11:07:25 by bthomas          ###   ########.fr       */
+/*   Updated: 2024/04/12 12:33:25 by bthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	is_whitespace(int i)
+static int	istrimmed(unsigned char c, char const *set)
 {
-	if (i == 32 || i == '\n' || i == '\t')
-		return (1);
+	int	i;
+
+	i = 0;
+	while (set[i])
+	{
+		if (c == set[i])
+			return (1);
+		i++;
+	}
 	return (0);
 }
 
-char	*ft_strtrim(char const *s)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	int		endpos;
 	char	*dest;
 
-	while (is_whitespace(*s) && *s)
-		s++;
-	if (!*s)
-		return ((char *)s);
-	endpos = ft_strlen(s);
-	while (is_whitespace(s[endpos - 1]) && s[endpos - 1])
+	while (istrimmed(*s1, set) && *s1)
+		s1++;
+	if (!*s1)
+	{
+		dest = (char *)malloc(1);
+		if (!dest)
+			return (NULL);
+		dest[0] = 0;
+		return (dest);
+	}
+	endpos = ft_strlen(s1);
+	while (istrimmed(s1[endpos - 1], set) && s1[endpos - 1])
 		endpos--;
 	dest = ft_calloc(endpos + 1, sizeof(char));
 	if (!dest)
 		return (NULL);
-	ft_strlcpy(dest, s, endpos + 1);
+	ft_strlcpy(dest, s1, endpos + 1);
 	return (dest);
 }
 /*
