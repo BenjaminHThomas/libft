@@ -6,7 +6,7 @@
 /*   By: bthomas <bthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/31 15:14:37 by bthomas           #+#    #+#             */
-/*   Updated: 2024/03/31 16:15:45 by bthomas          ###   ########.fr       */
+/*   Updated: 2024/04/12 12:11:54 by bthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,18 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*sub;
 	char	*ps;
 
+	if (!s)
+		return (NULL);
+	if (start > (unsigned int)ft_strlen(s) || len == 0)
+	{
+		ps = (char *)malloc(1 * sizeof(char));
+		if (!ps)
+			return (NULL);
+		ps[0] = 0;
+		return (ps);
+	}
+	if (len > (size_t)ft_strlen(s))
+		len = (size_t)ft_strlen(s);
 	ps = (char *)s;
 	sub = ft_calloc(len + 1, sizeof(char));
 	if (!sub)
