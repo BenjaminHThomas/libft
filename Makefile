@@ -6,7 +6,7 @@
 #    By: bthomas <bthomas@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/29 11:11:38 by bthomas           #+#    #+#              #
-#    Updated: 2024/04/12 12:38:55 by bthomas          ###   ########.fr        #
+#    Updated: 2024/04/14 15:04:19 by bthomas          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -66,6 +66,8 @@ $(NAME):
 	ar -rc $(NAME) $(OFILES)
 
 all: $(NAME)
+
+bonus: all
 
 clean:
 	rm -f $(NAME)
