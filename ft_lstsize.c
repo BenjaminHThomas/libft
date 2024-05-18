@@ -6,7 +6,7 @@
 /*   By: bthomas <bthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 12:07:01 by bthomas           #+#    #+#             */
-/*   Updated: 2024/04/14 16:28:59 by bthomas          ###   ########.fr       */
+/*   Updated: 2024/05/18 13:23:42 by bthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ int	ft_lstsize(t_list *lst)
 	count = 0;
 	while (lst)
 	{
-		count++;
 		lst = lst->next;
+		count++;
 	}
 	return (count);
 }

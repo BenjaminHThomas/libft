@@ -6,7 +6,7 @@
 /*   By: bthomas <bthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 15:27:07 by bthomas           #+#    #+#             */
-/*   Updated: 2024/04/10 10:16:03 by bthomas          ###   ########.fr       */
+/*   Updated: 2024/05/18 13:37:22 by bthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,15 @@
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	t_list	*plst;
 	t_list	*pnext;
 
-	if (!lst || !*lst)
+	if (!lst)
 		return ;
-	plst = *lst;
-	while (plst)
+	while (*lst)
 	{
-		pnext = plst->next;
-		del(plst->content);
-		free(plst);
-		plst = pnext;
+		pnext = (*lst)->next;
+		ft_lstdelone(*lst, del);
+		*lst = pnext;
 	}
 	*lst = NULL;
 }

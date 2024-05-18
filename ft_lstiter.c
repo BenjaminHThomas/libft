@@ -6,7 +6,7 @@
 /*   By: bthomas <bthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 10:10:53 by bthomas           #+#    #+#             */
-/*   Updated: 2024/04/10 10:22:49 by bthomas          ###   ########.fr       */
+/*   Updated: 2024/05/18 13:40:59 by bthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,12 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	t_list	*plst;
-
-	if (!lst)
+	if (!lst || !f)
 		return ;
-	plst = lst;
-	while (plst)
+	while (lst)
 	{
-		f(plst->content);
-		plst = plst->next;
+		f(lst->content);
+		lst = lst->next;
 	}
 }
 /*
