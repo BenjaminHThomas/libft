@@ -6,7 +6,7 @@
 #    By: bthomas <bthomas@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/29 11:11:38 by bthomas           #+#    #+#              #
-#    Updated: 2024/05/18 13:47:24 by bthomas          ###   ########.fr        #
+#    Updated: 2024/05/21 19:32:14 by bthomas          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,15 +45,15 @@ CFILES	= ft_bzero.c \
 		  ft_putnbr_fd.c \
 		  ft_tolower.c
 
-BONUS_CFILES = ft_lstnew.c \
-		  ft_lstadd_front.c \
-		  ft_lstsize.c \
-		  ft_lstlast.c \
-		  ft_lstadd_back.c \
-		  ft_lstclear.c \
-		  ft_lstiter.c \
-		  ft_lstmap.c \
-		  ft_lstdelone.c
+BONUS_CFILES = ft_lstnew_bonus.c \
+		  ft_lstadd_front_bonus.c \
+		  ft_lstsize_bonus.c \
+		  ft_lstlast_bonus.c \
+		  ft_lstadd_back_bonus.c \
+		  ft_lstclear_bonus.c \
+		  ft_lstiter_bonus.c \
+		  ft_lstmap_bonus.c \
+		  ft_lstdelone_bonus.c
 
 OFILES = $(CFILES:.c=.o)
 BONUS_OFILES = $(BONUS_CFILES:.c=.o)

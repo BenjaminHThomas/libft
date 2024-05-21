@@ -6,7 +6,7 @@
 /*   By: bthomas <bthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/01 11:11:17 by bthomas           #+#    #+#             */
-/*   Updated: 2024/05/14 22:13:54 by bthomas          ###   ########.fr       */
+/*   Updated: 2024/05/21 19:29:01 by bthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,7 +95,7 @@ char	**ft_split(char const *s, char c)
 #include <stdio.h>
 int	main(void)
 {;
-	char	**wlist = ft_split("(^^^", '^');
+	char	**wlist = ft_split("hello! ", ' ');
 	int		i;
 
 	i = 0;
