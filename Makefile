@@ -6,11 +6,15 @@
 #    By: bthomas <bthomas@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/29 11:11:38 by bthomas           #+#    #+#              #
-#    Updated: 2024/05/21 19:32:14 by bthomas          ###   ########.fr        #
+#    Updated: 2024/05/22 14:11:43 by bthomas          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CFILES	= ft_bzero.c \
+NAME = libft.a
+CC = cc
+CFLAGS = -Wall -Wextra -Werror
+
+SRCS	= ft_bzero.c \
 		  ft_isalnum.c \
 		  ft_isascii.c \
 		  ft_isprint.c \
@@ -45,7 +49,7 @@ CFILES	= ft_bzero.c \
 		  ft_putnbr_fd.c \
 		  ft_tolower.c
 
-BONUS_CFILES = ft_lstnew_bonus.c \
+BONUS_SRCS = ft_lstnew_bonus.c \
 		  ft_lstadd_front_bonus.c \
 		  ft_lstsize_bonus.c \
 		  ft_lstlast_bonus.c \
@@ -55,23 +59,16 @@ BONUS_CFILES = ft_lstnew_bonus.c \
 		  ft_lstmap_bonus.c \
 		  ft_lstdelone_bonus.c
 
-OFILES = $(CFILES:.c=.o)
-BONUS_OFILES = $(BONUS_CFILES:.c=.o)
-
-CFLAGS = -Wall -Werror -Wextra
-
-NAME = libft.a
-
-COMPILER = gcc
-
-$(NAME):
-	$(COMPILER) $(CFLAGS) -c $(CFILES) -I./
-	ar -rcs $@ $(OFILES)
+OBJS = $(SRCS:.c=.o)
+BONUS_OBJS = $(BONUS_SRCS:.c=.o)
 
 all: $(NAME)
 
-bonus: $(OFILES) $(BONUS_OFILES)
-	ar -rcs $(NAME) $^
+$(NAME): $(OBJS)
+	ar rc $(NAME) $(OBJS)
+
+bonus: $(OBJS) $(BONUS_OBJS)
+	ar rc $(NAME) $(OBJS) $(BONUS_OBJS)
 
 clean:
 	@echo "Cleaning object files..."
