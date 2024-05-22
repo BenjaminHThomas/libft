@@ -6,7 +6,7 @@
 #    By: bthomas <bthomas@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/29 11:11:38 by bthomas           #+#    #+#              #
-#    Updated: 2024/05/22 14:11:43 by bthomas          ###   ########.fr        #
+#    Updated: 2024/05/22 14:27:22 by bthomas          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -65,10 +65,10 @@ BONUS_OBJS = $(BONUS_SRCS:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	ar rc $(NAME) $(OBJS)
+	ar rc $(NAME) $^
 
 bonus: $(OBJS) $(BONUS_OBJS)
-	ar rc $(NAME) $(OBJS) $(BONUS_OBJS)
+	ar rc $(NAME) $^
 
 clean:
 	@echo "Cleaning object files..."
