@@ -6,7 +6,7 @@
 /*   By: bthomas <bthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 13:13:09 by bthomas           #+#    #+#             */
-/*   Updated: 2024/05/21 20:36:58 by bthomas          ###   ########.fr       */
+/*   Updated: 2024/05/23 14:55:14 by bthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,18 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*head;
 	t_list	*node;
+	void	*temp;
 
 	if (!lst || !f || !del)
 		return (NULL);
 	head = NULL;
 	while (lst)
 	{
-		node = ft_lstnew(f(lst->content));
+		temp = f(lst->content);
+		node = ft_lstnew(temp);
 		if (!node)
 		{
+			del(temp);
 			ft_lstclear(&head, del);
 			return (NULL);
 		}

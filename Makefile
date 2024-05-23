@@ -6,7 +6,7 @@
 #    By: bthomas <bthomas@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/29 11:11:38 by bthomas           #+#    #+#              #
-#    Updated: 2024/05/22 14:27:22 by bthomas          ###   ########.fr        #
+#    Updated: 2024/05/23 14:57:24 by bthomas          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -72,7 +72,7 @@ bonus: $(OBJS) $(BONUS_OBJS)
 
 clean:
 	@echo "Cleaning object files..."
-	@rm -f *.o
+	@rm -f $(OBJS) $(BONUS_OBJS)
 
 fclean: clean
 	@echo "Removing program..."
@@ -80,4 +80,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all, clean, flcean, re
+.PHONY: all, clean, fclean, re, bonus
