@@ -6,7 +6,7 @@
 #    By: bthomas <bthomas@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/29 11:11:38 by bthomas           #+#    #+#              #
-#    Updated: 2024/05/23 14:57:24 by bthomas          ###   ########.fr        #
+#    Updated: 2024/05/26 16:04:37 by bthomas          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -59,10 +59,17 @@ BONUS_SRCS = ft_lstnew_bonus.c \
 		  ft_lstmap_bonus.c \
 		  ft_lstdelone_bonus.c
 
-OBJS = $(SRCS:.c=.o)
-BONUS_OBJS = $(BONUS_SRCS:.c=.o)
+OBJDIR = obj/
+OBJS = $(addprefix $(OBJDIR), $(SRCS:.c=.o))
+BONUS_OBJS = $(addprefix $(OBJDIR), $(BONUS_SRCS:.c=.o))
 
-all: $(NAME)
+all: $(OBJDIR) $(NAME)
+
+$(OBJDIR)%.o: %.c | $(OBJDIR)
+	$(CC) $(CFLAGS) -c $< -o $@
+
+$(OBJDIR):
+	@mkdir -p $(OBJDIR)
 
 $(NAME): $(OBJS)
 	ar rc $(NAME) $^
@@ -72,7 +79,7 @@ bonus: $(OBJS) $(BONUS_OBJS)
 
 clean:
 	@echo "Cleaning object files..."
-	@rm -f $(OBJS) $(BONUS_OBJS)
+	@rm -rf $(OBJDIR)
 
 fclean: clean
 	@echo "Removing program..."
@@ -80,4 +87,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all, clean, fclean, re, bonus
+.PHONY: all clean fclean re bonus
