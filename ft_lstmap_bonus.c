@@ -6,7 +6,7 @@
 /*   By: bthomas <bthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 13:13:09 by bthomas           #+#    #+#             */
-/*   Updated: 2024/05/23 14:55:14 by bthomas          ###   ########.fr       */
+/*   Updated: 2024/05/26 15:54:40 by bthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,18 +36,3 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	}
 	return (head);
 }
-/*
-void	del(void *content)
-{
-	if (content == NULL)
-		return ;
-	free(content);
-}
-
-void	*change_content(void *s)
-{
-	if (s)
-		free(s);
-	s = ft_strdup("AAAAA");
-	return (s);
-}*/

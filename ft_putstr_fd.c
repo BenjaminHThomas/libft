@@ -6,7 +6,7 @@
 /*   By: bthomas <bthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 10:31:39 by bthomas           #+#    #+#             */
-/*   Updated: 2024/04/08 10:43:48 by bthomas          ###   ########.fr       */
+/*   Updated: 2024/05/26 15:28:37 by bthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,5 @@
 
 void	ft_putstr_fd(char const *s, int fd)
 {
-	while (*s)
-	{
-		write(fd, &(*s), 1);
-		s++;
-	}
+	write(fd, s, ft_strlen(s));
 }
-/*
-int	main(void)
-{
-	ft_putstr_fd("Wowzers", 1);
-	return (0);
-}
-*/
